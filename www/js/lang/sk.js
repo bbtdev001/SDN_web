@@ -1,7 +1,7 @@
 /* ── Slovensky ── */
 i18n.register('sk', {
   nav: {
-    services: 'Riešenia', approach: 'Postup',
+    services: 'Riešenia', products: 'Produkty', approach: 'Postup',
     expertise: 'Expertíza', about: 'O nás', contact: 'Kontakt'
   },
   hero: {
@@ -17,6 +17,19 @@ i18n.register('sk', {
   srv: {
     tag: 'Čo robíme', h2: 'Naše hlavné služby',
     desc: 'Špecializovaná SAP expertíza pre moderné podniky – od čistých rozšírení až po kompletné migrácie na S/4HANA.'
+  },
+  prod: {
+    tag: 'Čo vytvárame',
+    h2: 'Naše produktové portfólio',
+    desc: 'Popri konzultačných dodávkach budujeme aj vlastné opakovane použiteľné produkty a akcelerátory pre SAP-orientované organizácie, ktoré potrebujú rýchlejšie nasadenie a lepšiu operatívnu kontrolu.',
+    c1t: 'Workflow akcelerátory',
+    c1d: 'Riešenia pripravené na nasadenie, ktoré zrýchľujú schvaľovania, workflowe kmeňových dát a spracovanie výnimiek v SAP procesoch.',
+    c2t: 'Vertikálne produktové balíky',
+    c2d: 'Zamerané produkty postavené okolo opakujúcich sa biznis problémov vo výrobe, logistike a servisných operáciách.',
+    c3t: 'Analytické a kontrolné nástroje',
+    c3d: 'Operatívne dashboardy a monitorovacie produkty, ktoré v reálnom čase zobrazujú úzke miesta, riziká a KPI dodávky.',
+    cta_text: 'Pozrite si portfólio a uvidíte, ako premieňame opakovateľnú expertízu na produkty, ktoré vaše tímy dokážu rýchlo prijať.',
+    cta: 'Zobraziť produktové portfólio'
   },
   s1: {
     h3: 'Rýchly SAP vývoj',
@@ -103,13 +116,14 @@ i18n.register('sk', {
     col1: 'Služby', col2: 'Spoločnosť', col3: 'Jazyk',
     s1: 'SAP vývoj', s2: 'Rozšírenia čistého jadra',
     s3: 'Migrácia na S/4HANA', s4: 'Architektonické poradenstvo',
-    about: 'O nás', approach: 'Náš postup', expertise: 'Expertíza', contact: 'Kontakt',
+    products: 'Produkty', about: 'O nás', approach: 'Náš postup', expertise: 'Expertíza', contact: 'Kontakt',
     lang_en: 'English', lang_de: 'Deutsch', lang_sk: 'Slovensky',
     copy: '© 2025 BERAENT. Všetky práva vyhradené.',
     trademark: 'SAP® je registrovaná ochranná známka SAP SE.'
   },
   common: {
     home: 'Domov',
+    products: 'Produkty',
     services: 'Služby',
     learn_more: 'Zistiť viac →',
     back_services: '← Späť na služby'
@@ -153,5 +167,25 @@ i18n.register('sk', {
     s3t: 'Integračná stratégia',
     s3b: 'SAP prostredia sú vždy prepojené s niečím – externé ERP, e-commerce platformy, skladové systémy, BI nástroje. Navrhujeme integračné architektúry, ktoré sú robustné, monitorovateľné a zosúladené so SAP API-first smerovaním, uprednostňujúc SAP Integration Suite a štandardné API pred krehkými vlastnými rozhraniami.',
     cta: 'Naplánovať posúdenie'
+  },
+  pg_prod: {
+    title: 'Produktové portfólio',
+    sub: 'Opakovane použiteľné produkty BERAENT navrhnuté tak, aby premenili overené SAP delivery vzory na nasaditeľné biznis aktíva.',
+    s1t: 'Stratégia portfólia',
+    s1b: 'Naše produktové portfólio zachytáva opakujúce sa delivery know-how a premieňa ho na udržiavateľné riešenia s definovanou roadmapou, modelom podpory a implementačným prístupom. Namiesto toho, aby sa zakaždým začínalo od nuly, môžu klienti využiť pripravené stavebné bloky, ktoré skracujú time-to-value bez straty architektonickej disciplíny.',
+    s2t: 'Produktové línie',
+    l1t: 'Procesné aplikácie',
+    l1b: 'Cielené produkty pre schvaľovania, riadenie výnimiek, správu dát a workflowovo náročné operatívne prípady použitia.',
+    l2t: 'Odvetvové balíky',
+    l2b: 'Balíky riešení pre opakujúce sa potreby vo výrobe, logistike, terénnych operáciách a servisne orientovaných prostrediach.',
+    l3t: 'Analytické produkty',
+    l3b: 'Nástroje pre operatívny prehľad, ktoré odhaľujú stav procesov, plnenie SLA, úzke miesta v zaťažení a kľúčové KPI pre rozhodovanie.',
+    s3t: 'Ako sa produkty dodávajú',
+    s3b: 'Každý produkt dodávame s jasne definovaným rozsahom nasadenia, modelom rozšírenia a hranicou ownershipu. Definujeme, čo je štandard v rámci produktu, čo je konfigurovateľné a kam patria zákaznícke rozšírenia. Tým udržiavame implementačné termíny realistické a chránime produkt pred tým, aby sa z neho stal jednorazový custom code.',
+    s4t: 'Architektonické princípy',
+    s4b: 'Na portfólio uplatňujeme rovnaké inžinierske štandardy ako pri konzultačných projektoch: čisté rozhrania, rozšíriteľnosť odolnú voči upgradom, testovateľný kód a preferenciu modulárneho nasadenia na SAP-kompatibilných architektonických vzoroch. Produkty majú byť dlhodobo prevádzkovateľné, nielen pôsobivé na deme.',
+    cta_head: 'Hľadáte vhodný produkt?',
+    cta_body: 'Pomôžeme vám priradiť váš biznis problém k najbližšej produktovej línii a ukážeme, kde končí konfigurácia a začína custom development.',
+    cta: 'Prediskutovať váš use case'
   }
 });

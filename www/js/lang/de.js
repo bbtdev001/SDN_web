@@ -1,7 +1,7 @@
 /* ── Deutsch ── */
 i18n.register('de', {
   nav: {
-    services: 'Lösungen', approach: 'Vorgehen',
+    services: 'Lösungen', products: 'Produkte', approach: 'Vorgehen',
     expertise: 'Expertise', about: 'Über uns', contact: 'Kontakt'
   },
   hero: {
@@ -17,6 +17,19 @@ i18n.register('de', {
   srv: {
     tag: 'Was wir tun', h2: 'Unsere Kernleistungen',
     desc: 'Spezialisierte SAP-Expertise für moderne Unternehmen – von Clean-Core-Erweiterungen bis zur vollständigen S/4HANA-Migration.'
+  },
+  prod: {
+    tag: 'Was wir bauen',
+    h2: 'Unser Produktportfolio',
+    desc: 'Neben der Beratungsarbeit entwickeln wir eigene wiederverwendbare Produkte und Accelerators für SAP-orientierte Unternehmen, die schneller umsetzen und ihre Abläufe besser steuern wollen.',
+    c1t: 'Workflow-Accelerators',
+    c1d: 'Schnell einsetzbare Lösungen für Freigaben, Stammdaten-Workflows und Exception Handling in SAP-nahen Prozessen.',
+    c2t: 'Branchenspezifische Lösungspakete',
+    c2d: 'Fokussierte Produkte rund um wiederkehrende Geschäftsprobleme in Fertigung, Logistik und Servicebetrieb.',
+    c3t: 'Analytics- & Control-Tools',
+    c3d: 'Operative Dashboards und Monitoring-Produkte, die Engpässe, Risiken und Liefer-KPIs in Echtzeit sichtbar machen.',
+    cta_text: 'Entdecken Sie das Portfolio und sehen Sie, wie wir wiederholbare Expertise in schnell einführbare Produkte übersetzen.',
+    cta: 'Produktportfolio ansehen'
   },
   s1: {
     h3: 'Schnelle SAP-Entwicklung',
@@ -103,13 +116,14 @@ i18n.register('de', {
     col1: 'Leistungen', col2: 'Unternehmen', col3: 'Sprache',
     s1: 'SAP-Entwicklung', s2: 'Clean-Core-Erweiterungen',
     s3: 'S/4HANA-Migration', s4: 'Architekturberatung',
-    about: 'Über uns', approach: 'Unser Vorgehen', expertise: 'Expertise', contact: 'Kontakt',
+    products: 'Produkte', about: 'Über uns', approach: 'Unser Vorgehen', expertise: 'Expertise', contact: 'Kontakt',
     lang_en: 'English', lang_de: 'Deutsch', lang_sk: 'Slovensky',
     copy: '© 2025 BERAENT. Alle Rechte vorbehalten.',
     trademark: 'SAP® ist eine eingetragene Marke der SAP SE.'
   },
   common: {
     home: 'Startseite',
+    products: 'Produkte',
     services: 'Leistungen',
     learn_more: 'Mehr erfahren →',
     back_services: '← Zurück zu den Leistungen'
@@ -153,5 +167,25 @@ i18n.register('de', {
     s3t: 'Integrationsstrategie',
     s3b: 'SAP-Landschaften sind immer mit irgendetwas verbunden – Drittsystemen, E-Commerce-Plattformen, Lagersystemen, BI-Tools. Wir entwerfen Integrationsarchitekturen, die robust, überwachbar und an SAPs API-first-Ausrichtung ausgerichtet sind, und bevorzugen die SAP Integration Suite und Standard-APIs gegenüber fragilen Eigenentwicklungen.',
     cta: 'Assessment vereinbaren'
+  },
+  pg_prod: {
+    title: 'Produktportfolio',
+    sub: 'Wiederverwendbare BERAENT-Produkte, die bewährte SAP-Liefermuster in einsetzbare Business-Assets verwandeln.',
+    s1t: 'Portfolio-Strategie',
+    s1b: 'Unser Produktportfolio bündelt wiederkehrendes Delivery-Know-how und überführt es in wartbare Lösungen mit klarer Roadmap, Support-Modell und Implementierungsmuster. Statt jedes Mal bei null zu beginnen, können Kunden strukturierte Bausteine übernehmen, die die Time-to-Value verkürzen, ohne architektonische Disziplin aufzugeben.',
+    s2t: 'Produktlinien',
+    l1t: 'Prozess-Apps',
+    l1b: 'Zielgerichtete Produkte für Freigaben, Exception Management, Datenpflege und workflow-intensive operative Anwendungsfälle.',
+    l2t: 'Branchenpakete',
+    l2b: 'Lösungsbündel für wiederkehrende Anforderungen in Fertigung, Logistik, Außendienst und serviceorientierten Betriebsmodellen.',
+    l3t: 'Analytics-Produkte',
+    l3b: 'Werkzeuge für operative Transparenz, die Prozesszustand, SLA-Einhaltung, Arbeitslastengpässe und entscheidende KPIs sichtbar machen.',
+    s3t: 'Wie Produkte ausgeliefert werden',
+    s3b: 'Jedes Produkt wird mit klarem Deployment-Umfang, Erweiterungsmodell und Ownership-Grenze geliefert. Wir definieren, was Standard im Produkt ist, was konfigurierbar bleibt und wo kundenspezifische Erweiterungen hingehören. So bleiben Implementierungszeiten realistisch und das Produkt driftet nicht in einmaligen Custom Code ab.',
+    s4t: 'Architekturprinzipien',
+    s4b: 'Für das Portfolio gelten dieselben Engineering-Standards wie für unsere Beratungsprojekte: saubere Schnittstellen, upgrade-sichere Erweiterungspunkte, testbarer Code und ein klarer Fokus auf modularen, SAP-tauglichen Deployment-Mustern. Produkte sollen langfristig betreibbar sein, nicht nur in einer Demo beeindrucken.',
+    cta_head: 'Suchen Sie die passende Produktlinie?',
+    cta_body: 'Wir ordnen Ihr Geschäftsproblem der passenden Produktlinie zu und zeigen klar, wo Konfiguration endet und kundenspezifische Entwicklung beginnt.',
+    cta: 'Use Case besprechen'
   }
 });

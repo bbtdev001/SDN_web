@@ -256,7 +256,7 @@ function handleHashNavigation() {
     return;
   }
 
-  if (!currentPage) {
+  if (currentPage !== HOME_PAGE) {
     loadPage(HOME_PAGE, { smoothScroll: false });
   }
 }

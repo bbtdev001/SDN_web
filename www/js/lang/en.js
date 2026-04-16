@@ -1,7 +1,7 @@
 /* ── English ── */
 i18n.register('en', {
   nav: {
-    services: 'Services', approach: 'Approach',
+    services: 'Services', products: 'Products', approach: 'Approach',
     expertise: 'Expertise', about: 'About', contact: 'Contact Us'
   },
   hero: {
@@ -17,6 +17,19 @@ i18n.register('en', {
   srv: {
     tag: 'What We Do', h2: 'Our Core Services',
     desc: 'Specialized SAP expertise for modern enterprises — from clean extensions to full-scale S/4HANA migrations.'
+  },
+  prod: {
+    tag: 'What We Build',
+    h2: 'Our Product Portfolio',
+    desc: 'Alongside consulting delivery, we build our own reusable products and accelerators for SAP-centric organizations that need faster execution and clearer operational control.',
+    c1t: 'Workflow Accelerators',
+    c1d: 'Ready-to-deploy solutions that streamline approvals, master-data workflows, and exception handling across SAP processes.',
+    c2t: 'Vertical Solution Packages',
+    c2d: 'Focused products built around recurring business problems in manufacturing, logistics, and service operations.',
+    c3t: 'Analytics & Control Tools',
+    c3d: 'Operational dashboards and monitoring products that surface bottlenecks, risks, and delivery KPIs in real time.',
+    cta_text: 'Explore the portfolio to see how we package repeatable expertise into products your teams can adopt quickly.',
+    cta: 'View Product Portfolio'
   },
   s1: {
     h3: 'Rapid SAP Development',
@@ -103,13 +116,14 @@ i18n.register('en', {
     col1: 'Services', col2: 'Company', col3: 'Language',
     s1: 'SAP Development', s2: 'Clean Core Extensions',
     s3: 'S/4HANA Migration', s4: 'Architecture Advisory',
-    about: 'About Us', approach: 'Our Approach', expertise: 'Expertise', contact: 'Contact',
+    products: 'Products', about: 'About Us', approach: 'Our Approach', expertise: 'Expertise', contact: 'Contact',
     lang_en: 'English', lang_de: 'Deutsch', lang_sk: 'Slovensky',
     copy: '© 2025 BERAENT. All rights reserved.',
     trademark: 'SAP® is a registered trademark of SAP SE.'
   },
   common: {
     home: 'Home',
+    products: 'Products',
     services: 'Services',
     learn_more: 'Learn more →',
     back_services: '← Back to Services'
@@ -153,5 +167,25 @@ i18n.register('en', {
     s3t: 'Integration Strategy',
     s3b: 'SAP landscapes are always connected to something — third-party ERP, e-commerce platforms, warehouse systems, BI tools. We design integration architectures that are robust, monitorable, and aligned with SAP\'s API-first direction, favouring SAP Integration Suite and standard APIs over brittle custom interfaces.',
     cta: 'Schedule an assessment'
+  },
+  pg_prod: {
+    title: 'Product Portfolio',
+    sub: 'Reusable BERAENT products designed to turn proven SAP delivery patterns into deployable business assets.',
+    s1t: 'Portfolio Strategy',
+    s1b: 'Our product portfolio captures recurring delivery know-how and turns it into maintainable solutions with a defined roadmap, support model, and implementation pattern. Instead of starting from zero every time, clients can adopt opinionated building blocks that shorten time to value without sacrificing architectural discipline.',
+    s2t: 'Product Lines',
+    l1t: 'Process Apps',
+    l1b: 'Purpose-built products for approvals, exception management, data stewardship, and workflow-heavy operational use cases.',
+    l2t: 'Industry Packages',
+    l2b: 'Solution bundles targeting repeatable needs in manufacturing, logistics, field operations, and service delivery environments.',
+    l3t: 'Analytics Products',
+    l3b: 'Operational insight tools that expose process health, SLA adherence, workload bottlenecks, and decision-critical KPIs.',
+    s3t: 'How Products Are Delivered',
+    s3b: 'Each product is delivered with a clear deployment scope, extension model, and ownership boundary. We define what is standard within the product, what is configurable, and where customer-specific extensions belong. That keeps implementation timelines realistic and protects the product from drifting into one-off custom code.',
+    s4t: 'Architecture Principles',
+    s4b: 'The same engineering standards we apply in consulting delivery apply to the portfolio: clean interfaces, upgrade-safe extension points, testable code, and a bias toward modular deployment on SAP-friendly architecture patterns. Products are built to be supportable over time, not just impressive in a demo.',
+    cta_head: 'Looking for the right product fit?',
+    cta_body: 'We can map your business problem to the closest product line and show where configuration ends and custom development begins.',
+    cta: 'Discuss your use case'
   }
 });
