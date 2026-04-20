@@ -66,7 +66,10 @@ i18n.register('en', {
     p1t: 'Upgrade Confidence',    p1d: 'Extensions survive every SAP release without manual rework.',
     p2t: 'BTP-First Mindset',     p2d: 'All custom logic lives on SAP Business Technology Platform.',
     p3t: 'Released APIs Only',    p3d: 'No hidden dependencies — we only use SAP-released, stable interfaces.',
-    p4t: 'Cloud-Native Evolution', p4d: 'Architecture built for RISE with SAP and future cloud scenarios.'
+    p4t: 'Cloud-Native Evolution', p4d: 'Architecture built for RISE with SAP and future cloud scenarios.',
+    vis0: 'SAP Core',
+    vis1: 'Stable Interfaces',
+    vis2: 'BTP Extensions'
   },
   ap: {
     tag: 'How We Work', h2: 'Our Delivery Approach',

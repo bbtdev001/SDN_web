@@ -36,6 +36,7 @@ This site is a static shell plus loadable page fragments.
 - Translations live in `www/js/lang/*.js`.
 - Prefer changing copy in translation files instead of duplicating text edits across fragments.
 - Use stable keys; avoid renaming keys unless the structure itself changes.
+- For development, never insert text content into the HTML code - use a placeholder `<!--I18N_TEXT-->`
 
 ## AI Amendment Guidance
 

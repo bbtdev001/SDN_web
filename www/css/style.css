@@ -2,12 +2,6 @@
    BERAENT — Main Stylesheet
    ═══════════════════════════════════════════════════ */
 
-/* ── SAP Icon Font ── */
-@font-face {
-  font-family: sapicons;
-  src: url(SAP-icons.ttf);
-}
-
 /* ── Custom Properties ── */
 :root {
   --navy:      #06144A;

@@ -170,6 +170,20 @@ function initDynamicContent(scope = document) {
   }
 }
 
+function execPageScripts(pageContent){
+  pageContent.querySelectorAll('script').forEach((oldScript)=>{
+    const newScript=document.createElement('script');
+
+    [...oldScript.attributes].forEach(attr =>
+      newScript.setAttribute(attr.name, attr.value)
+    );
+
+    newScript.textContent = oldScript.textContent;
+
+    oldScript.parentNode.replaceChild(newScript, oldScript);
+  });
+}
+
 async function loadPage(pageSlug = HOME_PAGE, { pushHash = false, targetId = null, smoothScroll = true } = {}) {
   const pageContent = document.getElementById('page-content');
   if (!pageContent) return;
@@ -188,6 +202,8 @@ async function loadPage(pageSlug = HOME_PAGE, { pushHash = false, targetId = nul
     currentPage = pageSlug;
     setDocumentTitle(pageRoot);
     initDynamicContent(pageRoot);
+
+    execPageScripts(pageContent);
 
     if (pushHash) {
       const nextHash = pageSlug === HOME_PAGE ? `${window.location.pathname}${window.location.search}` : `${window.location.pathname}${window.location.search}${PAGE_HASH_PREFIX}${pageSlug}`;

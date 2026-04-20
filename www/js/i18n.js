@@ -11,9 +11,13 @@ const i18n = (() => {
     translations[lang] = data;
   }
 
-  function t(key) {
+  function t(key,lang) {
     const parts = key.split('.');
-    let obj = translations[current];
+    
+    if(lang===undefined)
+      lang=current;
+    
+    let obj = translations[lang];
     for (const p of parts) {
       if (obj == null) return key;
       obj = obj[p];
@@ -29,8 +33,12 @@ const i18n = (() => {
     document.documentElement.setAttribute('lang', lang);
 
     document.querySelectorAll('[data-i18n]').forEach(el => {
-      const val = t(el.dataset.i18n);
-      if (val !== el.dataset.i18n) el.textContent = val;
+      var val = t(el.dataset.i18n);
+      
+      if(val === el.dataset.i18n)
+        val = t(el.dataset.i18n, 'en');
+
+      if (val !== el.dataset.i18n) el.textContent = val;              
     });
 
     document.querySelectorAll('[data-i18n-ph]').forEach(el => {

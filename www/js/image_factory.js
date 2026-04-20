@@ -70,8 +70,30 @@ const imageFactory=(()=>{
         return id;
     }
 
+    function getIcon(icon){
+        switch(icon){
+            case 'grid':
+                return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>`;
+            case 'stack':
+                return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>`;
+        }
+    }
+
+    function setIcons(){        
+        document.querySelectorAll('[data-imagefactory-icon]').forEach((e)=>{
+            if(e.hasChildNodes())
+                return;
+
+            const i=e.getAttribute('data-imagefactory-icon');
+            const icon=getIcon(i);
+            e.innerHTML=icon;
+        });
+    }
+
     return {
         getLogo:getLogo,
-        getStripe:getStripe
+        getStripe:getStripe,
+        getIcon:getIcon,
+        setIcons:setIcons
     };
 })();
