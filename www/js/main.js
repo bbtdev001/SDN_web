@@ -338,6 +338,7 @@ function initNavbar() {
       const open = links.classList.toggle('open');
       toggle.classList.toggle('open', open);
       toggle.setAttribute('aria-expanded', String(open));
+      nav.classList.toggle('menu-open', open);
     });
   }
 }

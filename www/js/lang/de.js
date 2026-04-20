@@ -2,7 +2,8 @@
 i18n.register('de', {
   nav: {
     services: 'Lösungen', products: 'Produkte', approach: 'Vorgehen',
-    expertise: 'Expertise', about: 'Über uns', contact: 'Kontakt'
+    expertise: 'Expertise', about: 'Über uns', contact: 'Kontakt',
+    svc_consulting: 'Beratung', svc_product: 'Produktentwicklung', svc_governance: 'Governance'
   },
   hero: {
     tag: 'SAP Boutique-Beratung',

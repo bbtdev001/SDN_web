@@ -1,0 +1,131 @@
+// ── Responsive breakpoints ───────────────────────────────────────────
+// Contains ONLY layout overrides. Component-specific animation tweaks
+// live in their own partial; only grid/size/display changes go here.
+
+@media (max-width: 960px) {
+  section { padding: 5rem 0; }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .stat-item {
+    border-right: none;
+    border-bottom: 1px solid rgba(255,255,255,.1);
+
+    &:nth-child(odd)       { border-right: 1px solid rgba(255,255,255,.1); }
+    &:nth-last-child(-n+2) { border-bottom: none; }
+  }
+
+  .clean-core-inner  { grid-template-columns: 1fr; gap: 3.5rem; }
+  .clean-core-visual { order: -1; }
+  .core-diagram      { width: 260px; height: 260px; }
+  .core-ring.outer   { width: 260px; height: 260px; }
+  .core-ring.middle  { width: 180px; height: 180px; }
+  .core-ring.inner   { width: 100px; height: 100px; }
+
+  .about-inner   { grid-template-columns: 1fr; gap: 3rem; }
+  .contact-inner { grid-template-columns: 1fr; gap: 3rem; }
+  .footer-inner  { grid-template-columns: 1fr; gap: 3rem; }
+
+  .portfolio-preview-grid,
+  .portfolio-detail-grid { grid-template-columns: 1fr; }
+
+  .portfolio-preview-cta {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  :root { --nav-h: 60px; }
+  .container { padding: 0 1.25rem; }
+
+  // When menu is open, backdrop-filter on the navbar creates a containing
+  // block for fixed children in Chromium, clipping the overlay to 60px.
+  // Neutralise it so #nav-links covers the full viewport.
+  #navbar.scrolled.menu-open {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    background: rgba(6,20,74,.97);
+  }
+
+  #nav-links {
+    display: none;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 999;
+    background: var(--navy);
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 2rem 1.5rem;
+    padding-top: calc(var(--nav-h) + 1.5rem);
+    gap: 0;
+    overflow-y: auto;
+
+    &.open { display: flex; }
+
+    a{
+      width: 100%;
+      padding: 1rem 0;
+      font-size: 1.15rem;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+
+      &:last-child { border-bottom: none; }
+    }
+  }
+
+  .btn-nav { background: transparent; padding: 1rem 0; }
+
+  // Dropdown — inline expansion on mobile
+  .nav-dropdown-menu {
+    height:0;
+    position: static;
+    transform: none;
+    background: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    padding-left: 1rem;
+    margin-left: .25rem;
+
+    &::before { display: none; }
+
+    a {
+      padding: .7rem 0 !important;
+      font-size: 1rem !important;
+      border-bottom: 1px solid rgba(255,255,255,.06) !important;
+    }
+  }
+
+  .nav-dropdown-trigger { width: fit-content; justify-content: flex-start; }
+
+  // Hamburger must sit above the full-screen overlay (nav-links.open is z-index:999)
+  #nav-toggle { display: flex; position: relative; z-index: 1000; }
+
+  // Lang toggle inside full-screen menu
+  #nav-links .lang-toggle {
+    margin-top: auto;
+    padding-top: 2rem;
+    padding-left: 0;
+    border-left: none;
+    border-top: 1px solid rgba(255,255,255,.1);
+    width: 100%;
+  }
+
+  .services-grid  { grid-template-columns: 1fr; }
+  .process-steps  { grid-template-columns: 1fr; }
+  .form-row       { grid-template-columns: 1fr; }
+  .footer-links   { grid-template-columns: 1fr 1fr; }
+  .hero-cta       { flex-direction: column; align-items: flex-start; }
+  .stats-grid     { grid-template-columns: 1fr 1fr; }
+  .contact-form   { padding: 1.75rem; }
+}
+
+@media (max-width: 480px) {
+  .stats-grid   { grid-template-columns: 1fr; }
+  .stat-item    { border-right: none; }
+  .footer-links { grid-template-columns: 1fr; }
+}

@@ -20,7 +20,15 @@
       <a href="#page/home" data-page="home" id="nav-logo" aria-label="BERAENT Home"></a>
 
       <div id="nav-links">
-        <a href="#services" data-home-target="services" data-i18n="nav.services"><!--I18N_TEXT--></a>
+        <div class="nav-dropdown">
+          <a data-i18n="nav.services" class="nav-dropdown-trigger"><!--I18N_TEXT--></a>
+
+          <div class="nav-dropdown-menu">
+            <a href="#services" data-home-target="services" data-i18n="nav.svc_consulting"><!--I18N_TEXT--></a>
+            <a href="#services" data-home-target="services" data-i18n="nav.svc_product"><!--I18N_TEXT--></a>
+            <a href="#services" data-home-target="services" data-i18n="nav.svc_governance"><!--I18N_TEXT--></a>
+          </div>
+        </div>
         <a href="#products" data-home-target="products" data-i18n="nav.products"><!--I18N_TEXT--></a>
         <a href="#approach" data-home-target="approach" data-i18n="nav.approach"><!--I18N_TEXT--></a>
         <a href="#technologies" data-home-target="technologies" data-i18n="nav.expertise"><!--I18N_TEXT--></a>
@@ -89,6 +97,31 @@
     document.getElementById('footer-logo').innerHTML =
       imageFactory.getLogo({ width: 'auto', height: '22px', color: 'rgba(255,255,255,0.55)' });
     i18n.init();
+  </script>
+
+  <script>
+    /* Dropdown: open/close on click, close on outside click or ESC */
+    document.querySelectorAll('.nav-dropdown-trigger').forEach(trigger => {
+      trigger.addEventListener('click', e => {
+        e.preventDefault();
+        e.stopPropagation();
+        const dropdown = trigger.closest('.nav-dropdown');
+        const wasOpen = dropdown.classList.contains('open');
+        // close all open dropdowns first
+        document.querySelectorAll('.nav-dropdown.open').forEach(d => d.classList.remove('open'));
+        if (!wasOpen) dropdown.classList.add('open');
+      });
+    });
+
+    document.addEventListener('click', () => {
+      document.querySelectorAll('.nav-dropdown.open').forEach(d => d.classList.remove('open'));
+    });
+
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape') {
+        document.querySelectorAll('.nav-dropdown.open').forEach(d => d.classList.remove('open'));
+      }
+    });
   </script>
   <script src="js/main.js"></script>
 

@@ -1,0 +1,22 @@
+// ── Hero shared base ─────────────────────────────────────────────────
+// Grid overlay applies to both home hero and .page-hero (sub-pages).
+// Home-specific variant lives in _home.scss; compact variant in _subpages.scss.
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: var(--navy);
+
+  // Grid overlay
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 20%, transparent 80%);
+    pointer-events: none;
+  }
+}

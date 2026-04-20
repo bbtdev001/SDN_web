@@ -2,6 +2,9 @@
   "name": "beraent-web",
   "private": true,
   "scripts": {
-    "dev": "python3 -m http.server 8081 --directory www"
+    "dev":       "python3 -m http.server 8081 --directory www",
+    "css":       "npx sass www/scss/style.scss www/css/style.css --no-source-map --style=expanded",
+    "css:watch": "npx sass www/scss/style.scss www/css/style.css --no-source-map --style=expanded --watch",
+    "css:min":   "npx sass www/scss/style.scss www/css/style.css --no-source-map --style=compressed"
   }
 }

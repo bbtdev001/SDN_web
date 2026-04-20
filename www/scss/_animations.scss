@@ -1,0 +1,14 @@
+// ── Scroll-reveal base ───────────────────────────────────────────────
+// Applied by JS via IntersectionObserver. Section-specific overrides
+// live alongside their component (e.g. clean-core scale, about slide-in).
+
+[data-animate] {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity .55s ease, transform .55s ease;
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

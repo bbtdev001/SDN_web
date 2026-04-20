@@ -2,7 +2,8 @@
 i18n.register('sk', {
   nav: {
     services: 'Riešenia', products: 'Produkty', approach: 'Postup',
-    expertise: 'Expertíza', about: 'O nás', contact: 'Kontakt'
+    expertise: 'Expertíza', about: 'O nás', contact: 'Kontakt',
+    svc_consulting: 'Poradenstvo', svc_product: 'Vývoj produktov', svc_governance: 'Riadenie'
   },
   hero: {
     tag: 'SAP Boutique Konzultácie',

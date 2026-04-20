@@ -1,0 +1,32 @@
+// ════════════════════════════════════════════════════════════════════
+// BERAENT — SCSS entry point
+// Compile:  npm run css
+// Watch:    npm run css:watch
+//
+// Edit order matters only for cascade specificity.
+// Add new partials between the last section and _responsive.
+// ════════════════════════════════════════════════════════════════════
+
+// 1. Tokens — must come first (defines CSS custom properties)
+@use 'variables';
+
+// 2. Reset & base elements
+@use 'base';
+
+// 3. Reusable UI components (order-independent)
+@use 'buttons';
+@use 'animations';
+
+// 4. Chrome: nav + footer appear on every page
+@use 'nav';
+@use 'footer';
+
+// 5. Shared hero base + all home-page sections
+@use 'hero';
+
+// 6. Sub age layouts
+@use 'pages/home';
+@use 'pages/subpages';
+
+// 7. Responsive overrides — always last
+@use 'responsive';

@@ -1,0 +1,51 @@
+// ── Buttons ──────────────────────────────────────────────────────────
+// All clickable pill/rect controls. Add new variants here.
+
+.btn-primary {
+  display: inline-block;
+  background: var(--blue);
+  color: var(--white);
+  padding: .85rem 2rem;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  font-size: 1rem;
+  transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+  border: 2px solid transparent;
+
+  &:hover {
+    background: var(--blue-lt);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(43,82,186,.35);
+  }
+}
+
+.btn-secondary {
+  display: inline-block;
+  background: transparent;
+  color: var(--white);
+  padding: .85rem 2rem;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  font-size: 1rem;
+  border: 2px solid rgba(255,255,255,.5);
+  transition: border-color var(--transition), background var(--transition), transform var(--transition);
+
+  &:hover {
+    border-color: var(--white);
+    background: rgba(255,255,255,.1);
+    transform: translateY(-2px);
+  }
+}
+
+.btn-nav {
+  display: inline-block;
+  background: var(--blue);
+  color: var(--white) !important;
+  padding: .5rem 1.25rem;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  font-size: .95rem;
+  transition: background var(--transition), transform var(--transition);
+
+  &:hover { background: var(--blue-lt); transform: translateY(-1px); }
+}

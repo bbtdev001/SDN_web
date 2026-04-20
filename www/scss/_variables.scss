@@ -1,0 +1,27 @@
+// ── Design tokens (CSS custom properties) ───────────────────────────
+// Edit here to change colours, radii, shadows, or timing site-wide.
+:root {
+  --navy:      #06144A;
+  --navy-mid:  #0d2170;
+  --blue:      #2B52BA;
+  --blue-lt:   #3d6cd4;
+  --cyan:      #0EA5E9;
+  --light:     #F8FAFC;
+  --light-2:   #EEF2F7;
+  --border:    #DDE3EC;
+  --text:      #1E293B;
+  --muted:     #64748B;
+  --white:     #FFFFFF;
+  --success:   #16a34a;
+
+  --radius-sm: 8px;
+  --radius:    14px;
+  --radius-lg: 22px;
+
+  --shadow-sm: 0 1px 4px rgba(6,20,74,.07);
+  --shadow:    0 4px 20px rgba(6,20,74,.10);
+  --shadow-lg: 0 12px 48px rgba(6,20,74,.16);
+
+  --transition: .3s cubic-bezier(.4,0,.2,1);
+  --nav-h: 68px;
+}
