@@ -150,6 +150,20 @@ function scrollToTarget(selector) {
   return true;
 }
 
+function getLangFromHash(hash = window.location.hash) {
+  const bare = hash.startsWith('#') ? hash.slice(1) : hash;
+  const first = bare.split('/')[0];
+  return (typeof i18n !== 'undefined' && i18n.langs.includes(first)) ? first : null;
+}
+
+function stripLangFromHash(hash = window.location.hash) {
+  const lang = getLangFromHash(hash);
+  if (!lang) return hash;
+  const bare = hash.startsWith('#') ? hash.slice(1) : hash;
+  const rest = bare.slice(lang.length + 1);
+  return rest ? `#${rest}` : '';
+}
+
 function getPageFromHash(hash = window.location.hash) {
   if (!hash.startsWith(PAGE_HASH_PREFIX)) return null;
   return hash.slice(PAGE_HASH_PREFIX.length);
@@ -205,25 +219,28 @@ async function loadPage(pageSlug = HOME_PAGE, { pushHash = false, targetId = nul
 
     execPageScripts(pageContent);
 
+    const lang = (typeof i18n !== 'undefined') ? i18n.current : 'en';
+
     if (pushHash) {
-      const nextHash = pageSlug === HOME_PAGE ? `${window.location.pathname}${window.location.search}` : `${window.location.pathname}${window.location.search}${PAGE_HASH_PREFIX}${pageSlug}`;
-      history.pushState(null, '', nextHash);
+      const nextHash = pageSlug === HOME_PAGE
+        ? `#${lang}`
+        : `#${lang}/page/${pageSlug}`;
+      history.pushState(null, '', `${window.location.pathname}${window.location.search}${nextHash}`);
     }
 
     if (targetId) {
-      const selector = `#${targetId}`;
       const scrollBehavior = smoothScroll ? 'smooth' : 'auto';
       requestAnimationFrame(() => {
-        const target = document.querySelector(selector);
+        const target = document.querySelector(`#${targetId}`);
         if (target) {
           target.scrollIntoView({ behavior: scrollBehavior, block: 'start' });
-          history.replaceState(null, '', `${window.location.pathname}${window.location.search}${selector}`);
+          history.replaceState(null, '', `${window.location.pathname}${window.location.search}#${lang}/${targetId}`);
         }
       });
     } else {
       window.scrollTo({ top: 0, behavior: smoothScroll ? 'smooth' : 'auto' });
-      if (pageSlug !== HOME_PAGE && !pushHash && window.location.hash !== `${PAGE_HASH_PREFIX}${pageSlug}`) {
-        history.replaceState(null, '', `${window.location.pathname}${window.location.search}${PAGE_HASH_PREFIX}${pageSlug}`);
+      if (pageSlug !== HOME_PAGE && !pushHash && window.location.hash !== `#${lang}/page/${pageSlug}`) {
+        history.replaceState(null, '', `${window.location.pathname}${window.location.search}#${lang}/page/${pageSlug}`);
       }
     }
   } catch (error) {
@@ -246,9 +263,10 @@ async function loadPage(pageSlug = HOME_PAGE, { pushHash = false, targetId = nul
 }
 
 function openHomeTarget(targetId) {
+  const lang = (typeof i18n !== 'undefined') ? i18n.current : 'en';
   if (currentPage === HOME_PAGE) {
     scrollToTarget(`#${targetId}`);
-    history.replaceState(null, '', `${window.location.pathname}${window.location.search}#${targetId}`);
+    history.replaceState(null, '', `${window.location.pathname}${window.location.search}#${lang}/${targetId}`);
     return;
   }
 
@@ -256,14 +274,20 @@ function openHomeTarget(targetId) {
 }
 
 function handleHashNavigation() {
-  const pageSlug = getPageFromHash();
+  const hash = window.location.hash;
+  const lang = getLangFromHash(hash);
+  if (lang && lang !== i18n.current) i18n.apply(lang);
+
+  const routeHash = stripLangFromHash(hash);
+
+  const pageSlug = getPageFromHash(routeHash);
   if (pageSlug) {
     loadPage(pageSlug, { smoothScroll: false });
     return;
   }
 
-  if (window.location.hash.startsWith('#') && window.location.hash.length > 1) {
-    const targetId = window.location.hash.slice(1);
+  if (routeHash.startsWith('#') && routeHash.length > 1) {
+    const targetId = routeHash.slice(1);
     if (currentPage === HOME_PAGE) {
       scrollToTarget(`#${targetId}`);
       return;

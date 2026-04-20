@@ -211,30 +211,15 @@ h5 { font-size: .85rem; font-weight: 700; letter-spacing: .06em; text-transform:
 /* ═══════════════════════════════════════════════════
    HERO
    ═══════════════════════════════════════════════════ */
-#hero {
+/* Shared hero base */
+.hero {
   position: relative;
-  min-height: 100svh;
-  display: flex;
-  align-items: center;
   overflow: hidden;
-  padding: var(--nav-h) 0 4rem;
   background: var(--navy);
 }
 
-/* Animated gradient mesh background */
-#hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(ellipse 70% 60% at 70% 40%, rgba(43,82,186,.55) 0%, transparent 65%),
-    radial-gradient(ellipse 40% 50% at 20% 70%, rgba(14,165,233,.25) 0%, transparent 60%),
-    radial-gradient(ellipse 50% 40% at 85% 80%, rgba(6,20,74,.8) 0%, transparent 60%);
-  animation: heroShift 10s ease-in-out infinite alternate;
-}
-
-/* Grid overlay */
-#hero::after {
+/* Grid overlay — defined once */
+.hero::after {
   content: '';
   position: absolute;
   inset: 0;
@@ -244,6 +229,25 @@ h5 { font-size: .85rem; font-weight: 700; letter-spacing: .06em; text-transform:
   background-size: 60px 60px;
   mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 20%, transparent 80%);
   pointer-events: none;
+}
+
+/* Home hero — full-viewport with animated gradient mesh */
+.hero:not(.page-hero) {
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  padding: var(--nav-h) 0 4rem;
+}
+
+.hero:not(.page-hero)::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 70% 60% at 70% 40%, rgba(43,82,186,.55) 0%, transparent 65%),
+    radial-gradient(ellipse 40% 50% at 20% 70%, rgba(14,165,233,.25) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 40% at 85% 80%, rgba(6,20,74,.8) 0%, transparent 60%);
+  animation: heroShift 10s ease-in-out infinite alternate;
 }
 
 @keyframes heroShift {
@@ -1004,23 +1008,13 @@ footer {
    SUB-PAGES  (services/*, and any future detail pages)
    ═══════════════════════════════════════════════════ */
 
-/* Page hero — replaces the full-viewport main hero */
+/* Page hero — compact header for inner pages */
 .page-hero {
   background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
   padding: calc(var(--nav-h) + 3.5rem) 0 4.5rem;
-  position: relative;
-  overflow: hidden;
 }
-.page-hero::after {          /* same subtle grid overlay as main hero */
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
-  background-size: 60px 60px;
+.page-hero::after {
   mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 10%, transparent 75%);
-  pointer-events: none;
 }
 
 /* Breadcrumb */
