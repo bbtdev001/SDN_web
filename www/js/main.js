@@ -1,7 +1,7 @@
 const PAGE_HASH_PREFIX = '#page/';
 const PAGE_BASE_PATH = 'pages/';
 const HOME_PAGE = 'home';
-const DEFAULT_TITLE = 'BERAENT — SAP Consulting & Development';
+const DEFAULT_TITLE = document.title;		
 
 let currentPage = null;
 let animationObserver;
@@ -136,7 +136,10 @@ function getPageFromHash(hash = window.location.hash) {
 }
 
 function setDocumentTitle(pageRoot) {
-  document.title = pageRoot?.dataset.title || DEFAULT_TITLE;
+  if(pageRoot && pageRoot.dataset.title)
+	document.title=i18n.t(pageRoot.dataset.title)
+  else	  
+	document.title=DEFAULT_TITLE;
 }
 
 function initDynamicContent(scope = document) {

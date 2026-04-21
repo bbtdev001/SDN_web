@@ -1,27 +1,33 @@
 /* ── i18n engine ── */
 const i18n = (() => {
-  const STORAGE_KEY = 'beraent_lang';
+  const STORAGE_KEY = 'SFP_lang';
   const translations = {};
+  const DEFAULT_LANG = 'en';
 
   let current = (() => {
-    try { return localStorage.getItem(STORAGE_KEY) || 'en'; } catch(e) { return 'en'; }
+    try { return localStorage.getItem(STORAGE_KEY) || 'en'; } catch(e) { return DEFAULT_LANG; }
   })();
 
   function register(lang, data) {
     translations[lang] = data;
   }
 
-  function t(key,lang) {
-    const parts = key.split('.');
-    
-    if(lang===undefined)
-      lang=current;
+  function t(key,lang=current) {
+    const parts = key.split('.');    
     
     let obj = translations[lang];
     for (const p of parts) {
-      if (obj == null) return key;
+      if (obj == null){
+		  break;
+	  }
       obj = obj[p];
     }
+	
+	if(obj==null && lang!=DEFAULT_LANG){
+		//not found in the current language, try to return in DEFAULT_LANG		
+		return t(key, DEFAULT_LANG);
+	}
+	
     return obj != null ? String(obj) : key;
   }
 
@@ -35,10 +41,11 @@ const i18n = (() => {
     document.querySelectorAll('[data-i18n]').forEach(el => {
       var val = t(el.dataset.i18n);
 
-      if(val === el.dataset.i18n)
-        val = t(el.dataset.i18n, 'en');
-
-      if (val !== el.dataset.i18n) el.textContent = val;
+      if (val !== el.dataset.i18n){ 
+		el.textContent = val;
+	  }else{
+		console.error("XX");
+	  }
     });
 
     document.querySelectorAll('[data-i18n-ph]').forEach(el => {

@@ -93,8 +93,8 @@ i18n.register('en', {
     p:  'Deep, hands-on experience across the full SAP technology landscape.'
   },
   ab: {
-    tag: 'About BERAENT', h2a: 'Boutique Expertise.', h2b: 'Enterprise Impact.',
-    p1: 'BERAENT is a boutique SAP consulting firm built by SAP developers, for businesses that demand more than generic advice. We are deliberately small — so every project receives senior attention and real accountability, from kickoff to go-live.',
+    tag: 'About SFP', h2a: 'Boutique Expertise.', h2b: 'Enterprise Impact.',
+    p1: 'SFP is a boutique SAP consulting firm built by SAP developers, for businesses that demand more than generic advice. We are deliberately small — so every project receives senior attention and real accountability, from kickoff to go-live.',
     p2: 'Our consultants combine deep technical SAP knowledge with practical delivery experience across industries including manufacturing, logistics, retail, and professional services.',
     cta: 'Get In Touch'
   },
@@ -118,7 +118,7 @@ i18n.register('en', {
     s3: 'S/4HANA Migration', s4: 'Architecture Advisory',
     products: 'Products', about: 'About Us', approach: 'Our Approach', expertise: 'Expertise', contact: 'Contact',
     lang_en: 'English', lang_de: 'Deutsch', lang_sk: 'Slovensky',
-    copy: '© 2025 BERAENT. All rights reserved.',
+    copy: '© 2025 SFP. All rights reserved.',
     trademark: 'SAP® is a registered trademark of SAP SE.'
   },
   common: {
@@ -170,7 +170,7 @@ i18n.register('en', {
   },
   pg_prod: {
     title: 'Product Portfolio',
-    sub: 'Reusable BERAENT products designed to turn proven SAP delivery patterns into deployable business assets.',
+    sub: 'Reusable SFP products designed to turn proven SAP delivery patterns into deployable business assets.',
     s1t: 'Portfolio Strategy',
     s1b: 'Our product portfolio captures recurring delivery know-how and turns it into maintainable solutions with a defined roadmap, support model, and implementation pattern. Instead of starting from zero every time, clients can adopt opinionated building blocks that shorten time to value without sacrificing architectural discipline.',
     s2t: 'Product Lines',
@@ -187,5 +187,12 @@ i18n.register('en', {
     cta_head: 'Looking for the right product fit?',
     cta_body: 'We can map your business problem to the closest product line and show where configuration ends and custom development begins.',
     cta: 'Discuss your use case'
+  },
+  
+  home:{
+	  page_title: 'SFP - Home'
+  },
+  products:{
+	  page_title: 'SFP - Product Portfolio'
   }
 });

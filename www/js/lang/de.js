@@ -6,7 +6,7 @@ i18n.register('de', {
     svc_consulting: 'Beratung', svc_product: 'Produktentwicklung', svc_governance: 'Governance'
   },
   hero: {
-    tag: 'SAP Produktfabrik',
+    tag: 'SAP Programmfabrik',
     h1a: 'SAP-Exzellenz.', h1b: 'Clean Core.', h1c: 'Auf den Punkt.',
     desc: 'Wir liefern schnelle, zukunftssichere SAP-Lösungen nach dem Clean-Core-Prinzip – und beschleunigen Ihren Weg zu S/4HANA.',
     cta1: 'Lösungen entdecken', cta2: 'Experten kontaktieren', scroll: 'Scrollen'
@@ -90,8 +90,8 @@ i18n.register('de', {
     p:  'Tiefe, praxiserprobte Erfahrung in der gesamten SAP-Technologielandschaft.'
   },
   ab: {
-    tag: 'Über BERAENT', h2a: 'Boutique-Expertise.', h2b: 'Enterprise-Wirkung.',
-    p1: 'BERAENT ist eine Boutique-SAP-Beratung, aufgebaut von SAP-Entwicklern für Unternehmen, die mehr als generische Beratung erwarten. Wir sind bewusst klein gehalten – damit jedes Projekt von Anfang bis Ende persönliche Senior-Betreuung und echte Verantwortlichkeit erhält.',
+    tag: 'Über SFP', h2a: 'Boutique-Expertise.', h2b: 'Enterprise-Wirkung.',
+    p1: 'SFP ist eine Boutique-SAP-Beratung, aufgebaut von SAP-Entwicklern für Unternehmen, die mehr als generische Beratung erwarten. Wir sind bewusst klein gehalten – damit jedes Projekt von Anfang bis Ende persönliche Senior-Betreuung und echte Verantwortlichkeit erhält.',
     p2: 'Unsere Berater verbinden tiefes technisches SAP-Know-how mit praktischer Projekterfahrung in Branchen wie Fertigungsindustrie, Logistik, Handel und Dienstleistung.',
     cta: 'Kontakt aufnehmen'
   },
@@ -115,7 +115,7 @@ i18n.register('de', {
     s3: 'S/4HANA-Migration', s4: 'Architekturberatung',
     products: 'Produkte', about: 'Über uns', approach: 'Unser Vorgehen', expertise: 'Expertise', contact: 'Kontakt',
     lang_en: 'English', lang_de: 'Deutsch', lang_sk: 'Slovensky',
-    copy: '© 2025 BERAENT. Alle Rechte vorbehalten.',
+    copy: '© 2025 SFP. Alle Rechte vorbehalten.',
     trademark: 'SAP® ist eine eingetragene Marke der SAP SE.'
   },
   common: {
@@ -167,7 +167,7 @@ i18n.register('de', {
   },
   pg_prod: {
     title: 'Produktportfolio',
-    sub: 'Wiederverwendbare BERAENT-Produkte, die bewährte SAP-Liefermuster in einsetzbare Business-Assets verwandeln.',
+    sub: 'Wiederverwendbare SFP-Produkte, die bewährte SAP-Liefermuster in einsetzbare Business-Assets verwandeln.',
     s1t: 'Portfolio-Strategie',
     s1b: 'Unser Produktportfolio bündelt wiederkehrendes Delivery-Know-how und überführt es in wartbare Lösungen mit klarer Roadmap, Support-Modell und Implementierungsmuster. Statt jedes Mal bei null zu beginnen, können Kunden strukturierte Bausteine übernehmen, die die Time-to-Value verkürzen, ohne architektonische Disziplin aufzugeben.',
     s2t: 'Produktlinien',

@@ -89,8 +89,8 @@ i18n.register('sk', {
     p:  'Hlboká, praktická skúsenosť naprieč celou technologickou krajinou SAP.'
   },
   ab: {
-    tag: 'O BERAENT', h2a: 'Boutique expertíza.', h2b: 'Enterprise vplyv.',
-    p1: 'BERAENT je boutique SAP konzultačná spoločnosť, ktorú vytvorili SAP vývojári pre firmy, ktoré požadujú viac ako generické poradenstvo. Sme zámerne malí – aby každý projekt dostával prvotriednu pozornosť seniorov a skutočnú zodpovednosť od začiatku do konca.',
+    tag: 'O SFP', h2a: 'Boutique expertíza.', h2b: 'Enterprise vplyv.',
+    p1: 'SFP je boutique SAP konzultačná spoločnosť, ktorú vytvorili SAP vývojári pre firmy, ktoré požadujú viac ako generické poradenstvo. Sme zámerne malí – aby každý projekt dostával prvotriednu pozornosť seniorov a skutočnú zodpovednosť od začiatku do konca.',
     p2: 'Naši konzultanti spájajú hlboké technické znalosti SAP s praktickými skúsenosťami z dodávok v odvetviach ako výroba, logistika, obchod a profesionálne služby.',
     cta: 'Kontaktujte nás'
   },
@@ -114,7 +114,7 @@ i18n.register('sk', {
     s3: 'Migrácia na S/4HANA', s4: 'Architektonické poradenstvo',
     products: 'Produkty', about: 'O nás', approach: 'Náš postup', expertise: 'Expertíza', contact: 'Kontakt',
     lang_en: 'English', lang_de: 'Deutsch', lang_sk: 'Slovensky',
-    copy: '© 2025 BERAENT. Všetky práva vyhradené.',
+    copy: '© 2025 SFP. Všetky práva vyhradené.',
     trademark: 'SAP® je registrovaná ochranná známka SAP SE.'
   },
   common: {
@@ -166,7 +166,7 @@ i18n.register('sk', {
   },
   pg_prod: {
     title: 'Produktové portfólio',
-    sub: 'Opakovane použiteľné produkty BERAENT navrhnuté tak, aby premenili overené SAP delivery vzory na nasaditeľné biznis aktíva.',
+    sub: 'Opakovane použiteľné produkty SFP navrhnuté tak, aby premenili overené SAP delivery vzory na nasaditeľné biznis aktíva.',
     s1t: 'Stratégia portfólia',
     s1b: 'Naše produktové portfólio zachytáva opakujúce sa delivery know-how a premieňa ho na udržiavateľné riešenia s definovanou roadmapou, modelom podpory a implementačným prístupom. Namiesto toho, aby sa zakaždým začínalo od nuly, môžu klienti využiť pripravené stavebné bloky, ktoré skracujú time-to-value bez straty architektonickej disciplíny.',
     s2t: 'Produktové línie',
