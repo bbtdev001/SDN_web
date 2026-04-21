@@ -90,8 +90,8 @@ i18n.register('de', {
     p:  'Tiefe, praxiserprobte Erfahrung in der gesamten SAP-Technologielandschaft.'
   },
   ab: {
-    tag: 'Über SFP', h2a: 'Boutique-Expertise.', h2b: 'Enterprise-Wirkung.',
-    p1: 'SFP ist eine Boutique-SAP-Beratung, aufgebaut von SAP-Entwicklern für Unternehmen, die mehr als generische Beratung erwarten. Wir sind bewusst klein gehalten – damit jedes Projekt von Anfang bis Ende persönliche Senior-Betreuung und echte Verantwortlichkeit erhält.',
+    tag: 'Über SPF', h2a: 'Boutique-Expertise.', h2b: 'Enterprise-Wirkung.',
+    p1: 'SPF ist eine Boutique-SAP-Beratung, aufgebaut von SAP-Entwicklern für Unternehmen, die mehr als generische Beratung erwarten. Wir sind bewusst klein gehalten – damit jedes Projekt von Anfang bis Ende persönliche Senior-Betreuung und echte Verantwortlichkeit erhält.',
     p2: 'Unsere Berater verbinden tiefes technisches SAP-Know-how mit praktischer Projekterfahrung in Branchen wie Fertigungsindustrie, Logistik, Handel und Dienstleistung.',
     cta: 'Kontakt aufnehmen'
   },
@@ -115,7 +115,7 @@ i18n.register('de', {
     s3: 'S/4HANA-Migration', s4: 'Architekturberatung',
     products: 'Produkte', about: 'Über uns', approach: 'Unser Vorgehen', expertise: 'Expertise', contact: 'Kontakt',
     lang_en: 'English', lang_de: 'Deutsch', lang_sk: 'Slovensky',
-    copy: '© 2025 SFP. Alle Rechte vorbehalten.',
+    copy: '© 2025 SPF. Alle Rechte vorbehalten.',
     trademark: 'SAP® ist eine eingetragene Marke der SAP SE.'
   },
   common: {
@@ -167,7 +167,7 @@ i18n.register('de', {
   },
   pg_prod: {
     title: 'Produktportfolio',
-    sub: 'Wiederverwendbare SFP-Produkte, die bewährte SAP-Liefermuster in einsetzbare Business-Assets verwandeln.',
+    sub: 'Wiederverwendbare SPF-Produkte, die bewährte SAP-Liefermuster in einsetzbare Business-Assets verwandeln.',
     s1t: 'Portfolio-Strategie',
     s1b: 'Unser Produktportfolio bündelt wiederkehrendes Delivery-Know-how und überführt es in wartbare Lösungen mit klarer Roadmap, Support-Modell und Implementierungsmuster. Statt jedes Mal bei null zu beginnen, können Kunden strukturierte Bausteine übernehmen, die die Time-to-Value verkürzen, ohne architektonische Disziplin aufzugeben.',
     s2t: 'Produktlinien',

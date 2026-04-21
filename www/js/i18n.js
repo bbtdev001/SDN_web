@@ -1,6 +1,6 @@
 /* ── i18n engine ── */
 const i18n = (() => {
-  const STORAGE_KEY = 'SFP_lang';
+  const STORAGE_KEY = 'SPF_lang';
   const translations = {};
   const DEFAULT_LANG = 'en';
 
